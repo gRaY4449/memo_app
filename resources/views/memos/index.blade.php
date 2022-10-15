@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Memo show</title>
+    <title>Document</title>
 </head>
 <body>
-    <a href="/memos">戻る</a>
-    <h1>{{ $memo->title }}</h1>
-    <p>{!! nl2br(e($memo->body)) !!}</p>
+    @foreach ($memos as $memo)
+            <!-- // リンク先をidで取得し名前で出力 -->
+            <li><a href="/memos/{{ $memo->id }}">{{ $memo->title }}</a></li>
+    @endforeach
 </body>
 </html>
