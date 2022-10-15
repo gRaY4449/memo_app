@@ -7,9 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    @foreach ($memos as $memo)
-            <!-- // リンク先をidで取得し名前で出力 -->
-            <li><a href="/memos/{{ $memo->id }}">{{ $memo->title }}</a></li>
-    @endforeach
+    <h1>タイトル一覧</h1>
+    <ul>
+        @foreach ($memos as $memo)
+                <!-- // リンク先をidで取得し名前で出力 -->
+                <li><a href="/memos/{{ $memo->id }}">{{ $memo->title }}</a></li>
+        @endforeach
+    </ul>
 </body>
 </html>
